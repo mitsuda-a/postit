@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Sample;
+
 class SamplesController extends Controller
 {
     /**
@@ -13,7 +15,11 @@ class SamplesController extends Controller
      */
     public function index()
     {
-        //
+        $samples = Sample::all();
+        
+        return view('samples.index',[
+            'samples' => $samples,
+        ]);
     }
 
     /**
