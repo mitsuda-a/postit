@@ -8,12 +8,13 @@
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script type="text/javascript" src="../resources/js/asset/samp.js"></script>
+        <link rel="stylesheet" href="../resources/css/samp.css">
        
     </head>
 
     <body>
         <header class="mb-4">
-            <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <nav class="navbar navbar-expand-sm navbar fixed-top navbar-dark bg-dark">
                 <a class="navbar-brand" href="/">PostIt</a>
                 
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#nav-bar">
@@ -32,6 +33,21 @@
             @yield('content')
             
         </div>
+        <footer>
+            <nav class="navbar navbar-expand-sm navbar fixed-bottom navbar-dark bg-dark">
+                <ul class="nav nav-pills nav-justified">
+                      <li class="nav-item">
+                        <a class="nav-link  active" href="#">Active</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">help</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                      </li>
+				</ul>
+            </nav>
+        </footer>
         
         
         

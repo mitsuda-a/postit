@@ -40,7 +40,11 @@ class SamplesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $sample = new Sample;
+        $sample->content = $request->content;
+        $sample->save();
+        
+        return redirect('/');
     }
 
     /**
