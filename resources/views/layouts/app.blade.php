@@ -14,7 +14,7 @@
 
     <body>
         <header class="mb-4">
-            <nav class="navbar navbar-expand-sm navbar fixed-top navbar-dark bg-dark">
+            <nav class="navbar navbar-expand-sm  navbar-dark bg-dark">
                 <a class="navbar-brand" href="/">PostIt</a>
                 
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#nav-bar">
@@ -28,10 +28,8 @@
                 </div>
             </nav>
         </header>
-        
         <div class="container">
             @yield('content')
-            
         </div>
         <footer>
             <nav class="navbar navbar-expand-sm navbar fixed-bottom navbar-dark bg-dark">

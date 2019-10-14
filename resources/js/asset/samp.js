@@ -3,4 +3,5 @@ $( function() {
 	$( '.drop' ).droppable();
 	$( "#sortable" ).sortable();
     $( "#sortable" ).disableSelection();
+    
 });

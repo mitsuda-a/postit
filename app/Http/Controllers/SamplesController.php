@@ -89,6 +89,9 @@ class SamplesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $sample = Sample::find($id);
+        $sample->delete();
+        
+        return redirect('/');
     }
 }
