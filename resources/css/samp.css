@@ -24,20 +24,20 @@ body {
 }
 #sortable li {
 	margin: 3px 3px 3px 0;
-	padding: 1px;
+	padding: 10px;
 	float: left;
 	font-size: 18px;
 	text-align: center;
 	background-color: #ffbfe4;
 	width: 30%;
-	height: 100px;
-	word-break: normal;
+	height: 120px;
+	word-break: break-all;
 	position: relative;
 	
 }
 span {
 	position: absolute;
-	top: 70px;
+	top: 90px;
 	left: 20px;
 }
 #button-pa {
@@ -53,4 +53,5 @@ span {
 .wf-nicomoji { 
 	 font-family: 'M PLUS Rounded 1c', sans-serif;
      font-family: 'Kosugi Maru', sans-serif;
+     
 }

@@ -19,4 +19,7 @@ Route::post('login', 'Auth\LoginController@login')->name('login.post');
 Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 // index
 Route::get('/', 'SamplesController@index');
-Route::resource('samples','SamplesController');
+Route::group(['middleware' => 'auth'], function(){
+    Route::resource('samples','SamplesController');
+});
+

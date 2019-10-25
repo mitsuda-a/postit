@@ -15,8 +15,12 @@ class CreateSamplesTable extends Migration
     {
         Schema::create('samples', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('user_id')->index();
             $table->string('content');
             $table->timestamps();
+            
+            
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

@@ -15,11 +15,20 @@ class SamplesController extends Controller
      */
     public function index()
     {
-        $samples = Sample::all();
+        $data = [];
+        if (\Auth::check()) {
+            $user = \Auth::user();
+            $samples = $user->samples()->orderBy('created_at', 'desc');
+            
+            $data = [
+                'user' => $user,
+                'samples' => $samples,
+            ];
+            
+        }
         
-        return view('samples.index',[
-            'samples' => $samples,
-        ]);
+        
+        return view('samples.index', $data);
     }
 
     /**
@@ -45,9 +54,9 @@ class SamplesController extends Controller
             
         ]);
         
-        $sample = new Sample;
-        $sample->content = $request->content;
-        $sample->save();
+        $request->user()->samples()->create([
+            'content' => $request->content,
+        ]);
         
         return redirect('/');
     }
@@ -94,9 +103,11 @@ class SamplesController extends Controller
      */
     public function destroy($id)
     {
-        $sample = Sample::find($id);
-        $sample->delete();
+        $sample = \App\Sample::find($id);
+        if(\Auth::id() === $sample->user_id) {
+            $sample->delete();
+        }
         
-        return redirect('/');
+        return back();
     }
 }

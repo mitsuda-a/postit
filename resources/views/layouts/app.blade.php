@@ -24,21 +24,7 @@
             
             @yield('content')
         </div>
-        <footer>
-            <nav class="navbar navbar-expand-sm navbar fixed-bottom navbar-dark bg-dark">
-                <ul class="nav nav-pills nav-justified">
-                      <li class="nav-item">
-                        <a class="nav-link  active" href="#">Active</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">help</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                      </li>
-				</ul>
-            </nav>
-        </footer>
+        
         
         
         
