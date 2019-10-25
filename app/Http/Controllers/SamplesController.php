@@ -40,6 +40,11 @@ class SamplesController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'content' => 'required|max:20',
+            
+        ]);
+        
         $sample = new Sample;
         $sample->content = $request->content;
         $sample->save();

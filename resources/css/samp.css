@@ -45,4 +45,12 @@ span {
 	margin: 0px;
 	border-style: none;
 	background-color: #ffbfe4;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+	
+}
+.wf-nicomoji { 
+	 font-family: 'M PLUS Rounded 1c', sans-serif;
+     font-family: 'Kosugi Maru', sans-serif;
 }
